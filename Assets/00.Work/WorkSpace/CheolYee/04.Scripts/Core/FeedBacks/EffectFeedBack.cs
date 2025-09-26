@@ -1,3 +1,4 @@
+using _00.Work.Resource.Scripts.SO;
 using _00.Work.Scripts.Managers;
 using _00.Work.Scripts.SO;
 using _00.Work.WorkSpace.CheolYee._04.Scripts.Core.Effects;
@@ -8,10 +9,12 @@ namespace _00.Work.WorkSpace.CheolYee._04.Scripts.Core.FeedBacks
     public class EffectFeedBack : FeedBack
     {
         [SerializeField] private PoolItem effectItem;
+        [SerializeField] private float effectDuration;
+        [SerializeField] Transform firePos;
         public override void CreateFeedback()
         {
-            EffectSystem effect = PoolManager.Instance.Pop(effectItem.poolName) as EffectSystem;
-            if (effect != null) effect.SetPosAndPlay(transform.position);
+            EffectPlayerSystem effect = PoolManager.Instance.Pop(effectItem.poolName) as EffectPlayerSystem;
+            if (effect != null) effect.SetPosAndPlay(firePos.transform.position, effectDuration);
         }
 
         public override void FinishFeedback()
