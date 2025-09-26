@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17e42b8cc7d645644b1f7316bb5c6188, type: 3}
   m_Name: LaserChargingEffect
   m_EditorClassIdentifier: 
-  poolName: 
-  prefab: {fileID: 0}
-  count: 0
+  poolName: ChargingEffect
+  prefab: {fileID: 4914013793391329700, guid: 9a867fd4bae26cc4dbb40ff939a996df, type: 3}
+  count: 1

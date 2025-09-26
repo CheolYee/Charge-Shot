@@ -1,11 +1,12 @@
+using _00.Work.Scripts.SO;
 using UnityEngine;
 
-namespace _00.Work.Scripts.SO
+namespace _00.Work.Resource.Scripts.SO
 {
     [CreateAssetMenu(fileName = "PoolItem", menuName = "SO/Pool/Item", order = 0)]
     public class PoolItem : ScriptableObject
     {
-        public string poolName;
+        [ReadOnly] public string poolName;
         public GameObject prefab;
         public int count;
 

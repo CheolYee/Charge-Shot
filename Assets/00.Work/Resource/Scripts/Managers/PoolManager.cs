@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using _00.Work.Resource.Scripts.SO;
 using _00.Work.Scripts.SO;
 using UnityEngine;
 using IPoolable = _00.Work.Scripts.SO.IPoolable;

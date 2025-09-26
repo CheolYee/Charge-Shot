@@ -4927,7 +4927,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 1
-      m_TileSpriteIndex: 4
+      m_TileSpriteIndex: 10
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -7527,7 +7527,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 1
-      m_TileSpriteIndex: 0
+      m_TileSpriteIndex: 4
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -7940,8 +7940,8 @@ Tilemap:
   - m_RefCount: 719
     m_Data: {fileID: 11400000, guid: 91efc8bb4f06785479209c95e07a4354, type: 2}
   m_TileSpriteArray:
-  - m_RefCount: 1
-    m_Data: {fileID: 5663061954668274717, guid: a5f3135a0352a8540ae7c56f7632e91a, type: 3}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   - m_RefCount: 0
     m_Data: {fileID: 0}
   - m_RefCount: 2
@@ -7949,7 +7949,7 @@ Tilemap:
   - m_RefCount: 70
     m_Data: {fileID: -2070828474, guid: a5f3135a0352a8540ae7c56f7632e91a, type: 3}
   - m_RefCount: 1
-    m_Data: {fileID: -2080340789, guid: a5f3135a0352a8540ae7c56f7632e91a, type: 3}
+    m_Data: {fileID: 5663061954668274717, guid: a5f3135a0352a8540ae7c56f7632e91a, type: 3}
   - m_RefCount: 10
     m_Data: {fileID: 484184942, guid: a5f3135a0352a8540ae7c56f7632e91a, type: 3}
   - m_RefCount: 19
@@ -7960,8 +7960,8 @@ Tilemap:
     m_Data: {fileID: 516879239, guid: a5f3135a0352a8540ae7c56f7632e91a, type: 3}
   - m_RefCount: 70
     m_Data: {fileID: -171836615, guid: a5f3135a0352a8540ae7c56f7632e91a, type: 3}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
+  - m_RefCount: 1
+    m_Data: {fileID: -2080340789, guid: a5f3135a0352a8540ae7c56f7632e91a, type: 3}
   - m_RefCount: 21
     m_Data: {fileID: -1013248192, guid: a5f3135a0352a8540ae7c56f7632e91a, type: 3}
   - m_RefCount: 1
@@ -8460,6 +8460,7 @@ MonoBehaviour:
   playerInput: {fileID: 11400000, guid: 718a3645b610d084ab24118bbab3d9e3, type: 2}
   firePos: {fileID: 1322625673}
   laserPrefab: {fileID: 11400000, guid: f4bcc4908cf9edc44923de19aa0e0a32, type: 2}
+  laserEffectPrefab: {fileID: 11400000, guid: 24dcad5189af46c4087b6964d893ef1e, type: 2}
   maxChargeTime: 3
 --- !u!1 &1322625672
 GameObject:
@@ -8486,7 +8487,7 @@ Transform:
   m_GameObject: {fileID: 1322625672}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.438, y: 0.882, z: 0}
+  m_LocalPosition: {x: 2.438, y: 0.95, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -19379,6 +19380,7 @@ GameObject:
   - component: {fileID: 1983073001}
   - component: {fileID: 1983073000}
   - component: {fileID: 1983073003}
+  - component: {fileID: 1983073004}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -19504,6 +19506,18 @@ MonoBehaviour:
     m_MipBias: 0
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
+--- !u!114 &1983073004
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1983072999}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d7e77f5e912435e95d92163b429fc17, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2087885035
 PrefabInstance:
   m_ObjectHideFlags: 0
