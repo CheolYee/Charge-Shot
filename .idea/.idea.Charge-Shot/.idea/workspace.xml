@@ -5,14 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="55fc02ba-fb02-47fe-b695-f25627f2807f" name="변경" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Charge-Shot/.idea/projectSettingsUpdater.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Charge-Shot/.idea/projectSettingsUpdater.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Charge-Shot/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Charge-Shot/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/00.Work/WorkSpace/Lusalord/00. Scenes.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/00.Work/WorkSpace/Lusalord/00. Scenes/Main.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/00.Work/WorkSpace/Lusalord/00. Scenes/Main.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/00.Work/WorkSpace/Lusalord/00. Scenes/Start.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/00.Work/WorkSpace/Lusalord/00. Scenes/Start.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ShaderGraphSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ShaderGraphSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/00.Work/WorkSpace/Lusalord/01. Scenes/Main.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/00.Work/WorkSpace/Lusalord/01. Scenes/Main.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/00.Work/WorkSpace/Lusalord/02.Script/FadeInOutUI.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/00.Work/WorkSpace/Lusalord/02.Script/FadeInOutUI.cs.meta" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,6 +19,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/00.Work/WorkSpace/Lusalord/02.Script/Main/SetActive.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.2d.tilemap@2d9cf49b8049/Editor/GridEditorUtility.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="ProjectColorInfo">{
@@ -117,6 +114,8 @@
       <workItem from="1758586434219" duration="3042000" />
       <workItem from="1758947447308" duration="3409000" />
       <workItem from="1758959690968" duration="640000" />
+      <workItem from="1759065291690" duration="4323000" />
+      <workItem from="1759100880743" duration="1100000" />
     </task>
     <servers />
   </component>
