@@ -19,6 +19,7 @@ namespace _00.Work.WorkSpace.CheolYee._04.Scripts.Turret
         
         [Header("Charge Settings")]
         [SerializeField] private float maxChargeTime = 3;
+        [SerializeField] private float maxChargeSpeed = 2;
         
         private float _chargeTime;
         private EffectPlayerSystem _currentEffect;
@@ -34,6 +35,12 @@ namespace _00.Work.WorkSpace.CheolYee._04.Scripts.Turret
                     {
                         _currentEffect.SetPosAndPlay(firePos.position);
                     }
+                }
+                else
+                {
+                    float ratio = Mathf.Clamp01(_chargeTime / maxChargeTime);
+                    var main = _currentEffect.ParticleSystem.main;
+                    main.simulationSpeed = Mathf.Lerp(1, maxChargeSpeed, ratio);
                 }
                 
                 _chargeTime += Time.deltaTime;
@@ -57,7 +64,7 @@ namespace _00.Work.WorkSpace.CheolYee._04.Scripts.Turret
         {
             float chargeRatio = _chargeTime / maxChargeTime;
             float damage = Mathf.Lerp(10f, 50f, chargeRatio);
-            float knockback = Mathf.Lerp(2f, 10f, chargeRatio);
+            float knockback = Mathf.Lerp(1f, 5f, chargeRatio);
 
             
             Laser laser = PoolManager.Instance.Pop(laserPrefab.poolName) as Laser;

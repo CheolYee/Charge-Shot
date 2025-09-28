@@ -49,7 +49,7 @@ namespace _00.Work.WorkSpace.CheolYee._04.Scripts.Projectiles.Laser
 
         public void LaserDamageCaster()
         {
-            damageCaster.CastDamage(_damage, _knockBackPower);
+            damageCaster.CastDamage(_damage, _knockBackPower, true);
         }
     }
 }
