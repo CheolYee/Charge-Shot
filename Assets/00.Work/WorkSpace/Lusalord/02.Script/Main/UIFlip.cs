@@ -5,12 +5,13 @@ using UnityEngine.UI;
 
 public class UIFlip : MonoBehaviour
 {
-    public RectTransform visual;
-    public bool isRotated;
+    public bool isRotated = false;
+    [SerializeField] private RectTransform visual;
 
-    public void Flip()
+    public void OnButtonClicked()
     {
-        visual.localEulerAngles = isRotated ? Vector3.zero : new Vector3(0f, 180f, 0f);
         isRotated = !isRotated;
+        float targetY = isRotated ? 180f : 0f;
+        visual.localRotation = Quaternion.Euler(0f, targetY, 0f);
     }
 }

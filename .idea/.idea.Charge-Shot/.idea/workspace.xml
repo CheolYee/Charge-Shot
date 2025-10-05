@@ -7,9 +7,7 @@
     <list default="true" id="55fc02ba-fb02-47fe-b695-f25627f2807f" name="변경" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Charge-Shot/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Charge-Shot/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/00.Work/WorkSpace/Lusalord/01. Scenes/Main.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/00.Work/WorkSpace/Lusalord/01. Scenes/Main.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/00.Work/WorkSpace/Lusalord/02.Script/Main/SwitchMode.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/00.Work/WorkSpace/Lusalord/02.Script/Main/SwitchMode.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/00.Work/WorkSpace/Lusalord/03.Asset/2-export 1.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/00.Work/WorkSpace/Lusalord/03.Asset/2-export 1.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/00.Work/WorkSpace/Lusalord/03.Asset/asdfqwer.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/00.Work/WorkSpace/Lusalord/03.Asset/asdfqwer.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/00.Work/WorkSpace/Lusalord/02.Script/Main/UIFlip.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/00.Work/WorkSpace/Lusalord/02.Script/Main/UIFlip.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -120,6 +118,7 @@
       <workItem from="1759106756916" duration="485000" />
       <workItem from="1759107389169" duration="1132000" />
       <workItem from="1759493562839" duration="3126000" />
+      <workItem from="1759679954676" duration="1087000" />
     </task>
     <servers />
   </component>
