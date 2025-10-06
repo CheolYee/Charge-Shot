@@ -6,7 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="55fc02ba-fb02-47fe-b695-f25627f2807f" name="변경" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Charge-Shot/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Charge-Shot/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/00.Work/WorkSpace/Lusalord/01. Scenes/Main.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/00.Work/WorkSpace/Lusalord/01. Scenes/Main.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/00.Work/WorkSpace/Lusalord/02.Script/Main/SwitchMode.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/00.Work/WorkSpace/Lusalord/02.Script/Main/SwitchMode.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/00.Work/WorkSpace/Lusalord/02.Script/Main/UIFlip.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/00.Work/WorkSpace/Lusalord/02.Script/Main/UIFlip.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -118,7 +118,10 @@
       <workItem from="1759106756916" duration="485000" />
       <workItem from="1759107389169" duration="1132000" />
       <workItem from="1759493562839" duration="3126000" />
-      <workItem from="1759679954676" duration="1087000" />
+      <workItem from="1759679954676" duration="1738000" />
+      <workItem from="1759753584203" duration="7000" />
+      <workItem from="1759753735445" duration="588000" />
+      <workItem from="1759755790737" duration="1075000" />
     </task>
     <servers />
   </component>

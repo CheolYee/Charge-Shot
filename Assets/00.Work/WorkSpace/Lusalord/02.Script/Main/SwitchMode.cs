@@ -1,22 +1,29 @@
-using System;
 using UnityEngine;
 
-public class SwitchMode : MonoBehaviour
+namespace _00.Work.WorkSpace.Lusalord._02.Script.Main
 {
-    public bool switchMode;
-
-    public GameObject switchOn;
-    public GameObject switchOff;
-
-    private void Start()
+    public class SwitchMode : MonoBehaviour
     {
-        switchMode = false; // off 상태로 시작
-    }
+        public bool switchMode;
 
-    public void OnClickSwitch()
-    {
-        switchMode = !switchMode;
-        switchOn.SetActive(switchMode); // On 인거 넣어야함
-        switchOff.SetActive(!switchMode); // Off 인거 넣어야함
+        public GameObject switchOn;
+        public GameObject switchOff;
+
+        private void Start()
+        {
+            switchMode = false; // off 상태로 시작
+        }
+
+        private void FixedUpdate()
+        {
+            switchOn.SetActive(switchMode); // On 인거 넣어야함
+            switchOff.SetActive(!switchMode); // Off 인거 넣어야함
+        }
+
+        public void OnClickSwitch()
+        {
+            switchMode = !switchMode;
+        
+        }
     }
 }

@@ -1151,7 +1151,7 @@ GameObject:
   - component: {fileID: 602545592}
   - component: {fileID: 602545591}
   m_Layer: 5
-  m_Name: Image
+  m_Name: Circuits
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1992,7 +1992,7 @@ GameObject:
   - component: {fileID: 1067248739}
   - component: {fileID: 1067248741}
   m_Layer: 5
-  m_Name: Panel
+  m_Name: Capacitor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2117,7 +2117,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1265239314}
-  - component: {fileID: 1265239315}
   m_Layer: 5
   m_Name: Line
   m_TagString: Untagged
@@ -2146,21 +2145,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1265239315
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1265239313}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 744a4cb8c35c4fd44a5b6039fdc305f9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  switchMode: 0
-  switchOn: {fileID: 0}
-  switchOff: {fileID: 0}
 --- !u!1 &1420881718
 GameObject:
   m_ObjectHideFlags: 0

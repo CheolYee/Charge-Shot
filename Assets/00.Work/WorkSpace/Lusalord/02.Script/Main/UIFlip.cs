@@ -1,17 +1,27 @@
 using System;
 using UnityEngine;
-using UnityEngine.Serialization;
-using UnityEngine.UI;
 
-public class UIFlip : MonoBehaviour
+namespace _00.Work.WorkSpace.Lusalord._02.Script.Main
 {
-    public bool isRotated = false;
-    [SerializeField] private RectTransform visual;
-
-    public void OnButtonClicked()
+    public class UIFlip : MonoBehaviour
     {
-        isRotated = !isRotated;
-        float targetY = isRotated ? 180f : 0f;
-        visual.localRotation = Quaternion.Euler(0f, targetY, 0f);
+        public bool isRotated ;
+        [SerializeField] private RectTransform visual;
+
+        private void Start()
+        {
+            isRotated = false;
+        }
+
+        private void FixedUpdate()
+        {
+            float targetY = isRotated ? 180f : 0f;
+            visual.localRotation = Quaternion.Euler(0f, targetY, 0f);
+        }
+
+        public void OnButtonClicked()
+        {
+            isRotated = !isRotated;
+        }
     }
 }
