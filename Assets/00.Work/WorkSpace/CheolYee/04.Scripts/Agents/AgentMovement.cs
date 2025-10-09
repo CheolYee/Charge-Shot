@@ -1,6 +1,7 @@
 using System.Collections;
 using _00.Work.WorkSpace.CheolYee._04.Scripts.Core;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace _00.Work.WorkSpace.CheolYee._04.Scripts.Agents
 {
@@ -21,7 +22,7 @@ namespace _00.Work.WorkSpace.CheolYee._04.Scripts.Agents
         public readonly NotifyValue<bool> IsGround = new NotifyValue<bool>();
 
         private float _xMove; //x축 이동 저장
-        private bool _canMove = true; //움직일 수 있는가?
+        [field: SerializeField] public bool CanMove { get; set; } = true; //움직일 수 있는가?
         private bool _canBeKnocked = true; //넉백 가능한지 (쿨타임)
         private Coroutine _kbCoroutine; //넉백 코루틴 저장 (최적화)
 
@@ -52,7 +53,7 @@ namespace _00.Work.WorkSpace.CheolYee._04.Scripts.Agents
         {
             CheckGround();
 
-            if (_canMove == false) return;
+            if (CanMove == false) return;
             MoveAgent();
         }
 
@@ -109,10 +110,10 @@ namespace _00.Work.WorkSpace.CheolYee._04.Scripts.Agents
         private IEnumerator KnockBackCoroutine()
         {
             _canBeKnocked = false;
-            _canMove = false;
+            CanMove = false;
             yield return new WaitForSeconds(KnockBackDuration);
             RbCompo.linearVelocity = Vector2.zero;
-            _canMove = true;
+            CanMove = true;
             _canBeKnocked = true;
         }
 

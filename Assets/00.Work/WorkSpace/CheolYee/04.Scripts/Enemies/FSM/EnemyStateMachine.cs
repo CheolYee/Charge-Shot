@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using UnityEngine;
 
 namespace _00.Work.WorkSpace.CheolYee._04.Scripts.Enemies.FSM
 {
@@ -28,6 +29,7 @@ namespace _00.Work.WorkSpace.CheolYee._04.Scripts.Enemies.FSM
             if (_enemy.IsDead && newState != EnemyBehaviourType.Death) return;
             if (!_stateDictionary.TryGetValue(newState, out var st) || st == null)
             {
+                Debug.Log("타입이 존재하지 않습니다.");
                 return;
             }
             CurrentState?.Exit();

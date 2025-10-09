@@ -1,3 +1,4 @@
+using _00.Work.Resource.Scripts.Managers;
 using _00.Work.Scripts.Managers;
 using _00.Work.Scripts.SO;
 using UnityEngine;
@@ -25,7 +26,6 @@ namespace _00.Work.WorkSpace.CheolYee._04.Scripts.Enemies.FSM
         public override void Update()
         {
             base.Update();
-            
             if (IsEndTriggerCall && _isDeadEffect == false)
             {
                 _isDeadEffect = true;
@@ -34,7 +34,6 @@ namespace _00.Work.WorkSpace.CheolYee._04.Scripts.Enemies.FSM
         }
         private void InvokeDeadEvent()
         {
-             
             if (Enemy is IPoolable poolable)
             {
                 PoolManager.Instance.Push(poolable);

@@ -31,7 +31,7 @@ namespace _00.Work.WorkSpace.CheolYee._04.Scripts.Creatures.Attack
             _resultArray = new Collider2D[detectCount];
         }
 
-        public bool CastDamage(float damage, float kbPower, bool isRight = false)
+        public bool CastDamage(float damage, float kbPower = 0, bool isRight = false)
         {
             int cnt;
             bool result = false;

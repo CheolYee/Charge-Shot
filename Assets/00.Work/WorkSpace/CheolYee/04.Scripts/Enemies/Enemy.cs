@@ -1,5 +1,8 @@
+using System.Collections;
 using _00.Work.Scripts.SO;
 using _00.Work.WorkSpace.CheolYee._04.Scripts.Agents;
+using _00.Work.WorkSpace.CheolYee._04.Scripts.Creatures.Attack;
+using _00.Work.WorkSpace.CheolYee._04.Scripts.Enemies.Anim;
 using _00.Work.WorkSpace.CheolYee._04.Scripts.Enemies.FSM;
 using _00.Work.WorkSpace.CheolYee._04.Scripts.Enemies.SO;
 using _00.Work.WorkSpace.CheolYee._04.Scripts.Managers;
@@ -25,6 +28,7 @@ namespace _00.Work.WorkSpace.CheolYee._04.Scripts.Enemies
         
         [Header("Attack Settings")]
         public float attackRadius; // 공격이 가능한 거리
+        public DamageCaster damageCaster;
         [HideInInspector] public float lastAttackTime;
         
         public string ItemName => itemName;
@@ -33,21 +37,26 @@ namespace _00.Work.WorkSpace.CheolYee._04.Scripts.Enemies
         public float MoveSpeed { get; private set; }
         public float JumpForce { get; private set; }
         public float AttackSpeed { get; private set; }
+
+        protected int EnemyLayer;
         
         protected EnemyStateMachine StateMachine; //FSM 머신 설정
+        protected EnemyAnimController AnimController; //에너미 전용 애니메이션 컨트롤러
+        
         
         public Transform TargetTransform {get; private set;}
 
         protected override void Awake()
         {
             base.Awake();
-            Damage = enemyData.attackDamage;
-            JumpForce = enemyData.jumpForce;
-            MoveSpeed = enemyData.moveSpeed;
-            AttackSpeed = enemyData.attackSpeed;
+            EnemyLayer = LayerMask.NameToLayer("Enemy");
             
-            HealthComponent.Initialize(this, enemyData.maxHealth);
-            MovementComponent.GetComponent<EnemyMovement>().Initialize(MoveSpeed, JumpForce);
+            MovementComponent.GetComponent<EnemyMovement>();
+            AnimController = GetComponentInChildren<EnemyAnimController>();
+            AnimController.Initialize(this);
+
+            Initialize(enemyData);
+            
 
             StateMachine = new EnemyStateMachine();
             
@@ -59,6 +68,32 @@ namespace _00.Work.WorkSpace.CheolYee._04.Scripts.Enemies
             StateMachine.Initialize(EnemyBehaviourType.Idle, this);
         }
 
+        private void OnEnable()
+        {
+            SpawnManager.Instance.Enemys.Add(this);
+            StartCoroutine(MaskChange());
+        }
+        
+        private IEnumerator MaskChange()
+        {
+            SpriteRendererComponent.maskInteraction = SpriteMaskInteraction.VisibleOutsideMask;
+            yield return new WaitForSeconds(0.5f);
+            SpriteRendererComponent.maskInteraction = SpriteMaskInteraction.None;
+        }
+
+        public void Initialize(EnemyDataSo enemyDataSo)
+        {
+            enemyData = enemyDataSo;
+            
+            Damage = enemyData.attackDamage;
+            JumpForce = enemyData.jumpForce;
+            MoveSpeed = enemyData.moveSpeed;
+            AttackSpeed = enemyData.attackSpeed;
+            
+            HealthComponent.Initialize(this, enemyData.maxHealth);
+            MovementComponent.Initialize(enemyData.moveSpeed, enemyData.jumpForce);
+        }
+
         private void Start()
         {
             TargetTransform = GameManager.Instance.TargetTransform;
@@ -66,15 +101,19 @@ namespace _00.Work.WorkSpace.CheolYee._04.Scripts.Enemies
 
         private void Update()
         {
-            if (!IsDead)
-            {
-                HandleSpriteFlip(TargetTransform.position);
-            }
+            HandleSpriteFlip(TargetTransform.position);
+            StateMachine.CurrentState.Update();
         }
         
         public void SetDead() //죽은 상태로 만들기
         {
+            SpawnManager.Instance.IsLastEnemy();
             StateMachine.ChangeState(EnemyBehaviourType.Death);
+        }
+
+        public void Attack()
+        {
+            damageCaster.CastDamage(Damage);
         }
 
         public void AnimationEndTrigger() //애니메이션이 끝났을 떄
@@ -88,7 +127,15 @@ namespace _00.Work.WorkSpace.CheolYee._04.Scripts.Enemies
             TargetTransform = GameManager.Instance.TargetTransform;
             StateMachine.ChangeState(EnemyBehaviourType.Idle);
             HealthComponent.ResetHealth();
-            gameObject.layer = LayerMask.NameToLayer("Ignore Raycast");
+            gameObject.layer = EnemyLayer;
         }
+        
+        #if UNITY_EDITOR
+        private void OnDrawGizmosSelected()
+        {
+            Gizmos.color = Color.red;
+            Gizmos.DrawWireSphere(transform.position, attackRadius);
+        }
+        #endif
     }
 }

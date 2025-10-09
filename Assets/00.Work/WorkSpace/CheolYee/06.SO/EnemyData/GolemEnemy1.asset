@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: GolemEnemy1
   m_EditorClassIdentifier: 
   maxHealth: 100
-  moveSpeed: 2
+  moveSpeed: 1.5
   jumpForce: 5
-  knockbackDuration: 0.1
+  knockbackDuration: 0.2
   attackDamage: 10
+  attackSpeed: 3

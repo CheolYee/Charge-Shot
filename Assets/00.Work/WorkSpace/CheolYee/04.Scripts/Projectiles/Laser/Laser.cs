@@ -1,13 +1,18 @@
 using System;
 using System.Collections;
+using _00.Work.Resource.Scripts.Managers;
 using _00.Work.Scripts.Managers;
 using _00.Work.WorkSpace.CheolYee._04.Scripts.Creatures.Attack;
+using _00.Work.WorkSpace.CheolYee._04.Scripts.Managers;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace _00.Work.WorkSpace.CheolYee._04.Scripts.Projectiles.Laser
 {
     public class Laser : Projectile
     {
+        public UnityEvent onStartLaser;
+        
         private static readonly int Attack = Animator.StringToHash("ATTACK");
 
         [Header("Laser Settings")]
@@ -41,9 +46,11 @@ namespace _00.Work.WorkSpace.CheolYee._04.Scripts.Projectiles.Laser
 
         private IEnumerator LaserStart()
         {
+            onStartLaser?.Invoke();
             _animator.SetBool(Attack, true);
             yield return new WaitForSeconds(lifeTime);
             _animator.SetBool(Attack, false);
+            CameraManager.Instance.StopShake();
             PoolManager.Instance.Push(this);
         }
 
