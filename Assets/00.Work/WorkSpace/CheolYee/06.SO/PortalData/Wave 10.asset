@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d68ebcb7735b40ff8977a2719075f3c7, type: 3}
+  m_Name: Wave 10
+  m_EditorClassIdentifier: 
+  enemies:
+  - {fileID: 11400000, guid: ccd2303b21b87a741b4d57dfda198731, type: 2}
+  - {fileID: 11400000, guid: 0a1ea4b443d083749ae6019b160acdc3, type: 2}
+  enemyData:
+  - {fileID: 11400000, guid: 9dd3207fadb50e04b8b0eec8f43ddaa9, type: 2}
+  - {fileID: 11400000, guid: 15e1b2431c02aa94e8ca6168aa2b32b0, type: 2}
+  enemyCount: 350
+  launchForce: 5
+  minTime: 1
+  maxTime: 2.5
+  portalColor: {r: 1, g: 1, b: 1, a: 1}

@@ -55,7 +55,6 @@ namespace _00.Work.WorkSpace.CheolYee._04.Scripts.Portals
             seq.AppendInterval(0.5f);
             seq.AppendCallback(() =>
             {
-                
                 StartCoroutine(SummonCoroutine());
             });
         }

@@ -1,4 +1,5 @@
 using _00.Work.WorkSpace.CheolYee._04.Scripts.Managers;
+using DG.Tweening;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -8,13 +9,23 @@ namespace _00.Work.WorkSpace.CheolYee._04.Scripts.UI
     public class WaveUI : MonoBehaviour
     {
         [SerializeField] private TextMeshProUGUI waveText;
+        
+        [Header("Next Wave Btn")]
         [SerializeField] private Button waveButton;
+        [SerializeField] private RectTransform waveButtonRect;
+        [SerializeField] private float duration = 0.4f;
+        [SerializeField] private float offsetX = 300;
+        
+        private Vector2 _startPos;
+        private Sequence _sequence;
 
-
+        private bool _isShowing;
+        
         private void Awake()
         {
             waveButton.onClick.AddListener(StartNextWave);
-            HideButton();
+            _startPos = waveButtonRect.anchoredPosition;
+            waveButtonRect.anchoredPosition = _startPos + new Vector2(offsetX, 0);
         }
 
         private void StartNextWave()
@@ -25,7 +36,14 @@ namespace _00.Work.WorkSpace.CheolYee._04.Scripts.UI
 
         private void HideButton()
         {
-            waveButton.gameObject.SetActive(false);
+            waveButton.interactable = false;
+            _isShowing = false;
+            
+            _sequence.Kill();
+            
+            _sequence = DOTween.Sequence();
+            _sequence.Append(waveButtonRect.DOAnchorPos(_startPos + new Vector2(offsetX, 0), duration).SetEase(Ease.OutCubic));
+            
         }
 
         private void Start()
@@ -42,7 +60,17 @@ namespace _00.Work.WorkSpace.CheolYee._04.Scripts.UI
 
         private void ShowButton()
         {
-            waveButton.gameObject.SetActive(true);
+            if (_isShowing) return;
+            
+            _isShowing = true;
+            
+            _sequence?.Kill();
+            waveButton.interactable = true;
+            
+            waveButtonRect.anchoredPosition = _startPos + new Vector2(offsetX, 0);
+            
+            _sequence = DOTween.Sequence();
+            _sequence.Append(waveButtonRect.DOAnchorPos(_startPos, duration).SetEase(Ease.OutCubic));
         }
     }
 }

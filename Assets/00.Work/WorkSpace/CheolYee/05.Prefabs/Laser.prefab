@@ -332,6 +332,7 @@ MonoBehaviour:
         m_CallState: 2
   lifeTime: 2
   damageCaster: {fileID: 481863819518558025}
+  laserSprite: {fileID: 6577819274008783337}
 --- !u!1001 &2652340449859220101
 PrefabInstance:
   m_ObjectHideFlags: 0

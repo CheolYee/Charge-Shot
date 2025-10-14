@@ -1,7 +1,8 @@
+using _00.Work.Resource.Scripts.Managers;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace _00.Work.Scripts.UI
+namespace _00.Work.Resource.Scripts.UI
 {
     public class FadeImgFinder : MonoBehaviour
     {

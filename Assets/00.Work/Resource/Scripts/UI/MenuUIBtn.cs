@@ -1,3 +1,4 @@
+using _00.Work.Resource.Scripts.Managers;
 using _00.Work.Scripts.Managers;
 using UnityEngine;
 using UnityEngine.UI;
@@ -41,7 +42,7 @@ namespace _00.Work.Scripts.UI
 
         public void ExitButton()
         {
-            Application.Quit();
+            FadeManager.Instance.FadeToScene(0);
         }
     }
 }

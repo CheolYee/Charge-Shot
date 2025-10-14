@@ -20,7 +20,7 @@ namespace _00.Work.WorkSpace.CheolYee._04.Scripts.Agents
 
         private Agent _owner;
 
-        public void Initialize(Agent owner, float health)
+        public void Initialize(float health, Agent owner = null)
         {
             _maxHealth = health;
             _owner = owner;

@@ -76,6 +76,7 @@ namespace _00.Work.WorkSpace.CheolYee._04.Scripts.Agents
 
         public void JumpTo(Vector2 force)
         {
+            StopImmediately();
             SetMovement(force.x); //force X는 방향으로 설정하고
             RbCompo.AddForce(force, ForceMode2D.Impulse); //Impulse는 즉시 속도에 적용하는 힘.
         }

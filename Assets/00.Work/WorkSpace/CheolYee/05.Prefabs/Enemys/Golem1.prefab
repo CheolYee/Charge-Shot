@@ -342,6 +342,10 @@ PrefabInstance:
       propertyPath: damageRadius
       value: 1.21
       objectReference: {fileID: 0}
+    - target: {fileID: 2477240385244892620, guid: f7a717eaf8b7e8849b80004f7b0199c1, type: 3}
+      propertyPath: whatIsTarget.layerMask.m_Bits
+      value: 512
+      objectReference: {fileID: 0}
     - target: {fileID: 6098930775441867136, guid: f7a717eaf8b7e8849b80004f7b0199c1, type: 3}
       propertyPath: m_Name
       value: DamageCaster

@@ -18,16 +18,18 @@ namespace _00.Work.WorkSpace.CheolYee._04.Scripts.Projectiles.Laser
         [Header("Laser Settings")]
         [SerializeField] private float lifeTime = 2f;
         [SerializeField] private DamageCaster damageCaster;
+        [SerializeField] private SpriteRenderer laserSprite;
         
         private float _damage; //데미지
         private float _knockBackPower; //넉백파워
         
         private Animator _animator;
 
-        public override void Initialize(Transform firepos, Vector2 direction, float damage, float knockBackPower, float speed)
+        public override void Initialize(Transform firepos, Vector2 direction, float damage, float knockBackPower, float speed, Color fireColor)
         {
             _damage = damage;
             _knockBackPower = knockBackPower;
+            laserSprite.color = fireColor;
             
             transform.position = firepos.position;
             StartCoroutine(LaserStart());
@@ -46,6 +48,7 @@ namespace _00.Work.WorkSpace.CheolYee._04.Scripts.Projectiles.Laser
 
         private IEnumerator LaserStart()
         {
+            SoundManager.Instance.PlaySfx("LASER");
             onStartLaser?.Invoke();
             _animator.SetBool(Attack, true);
             yield return new WaitForSeconds(lifeTime);

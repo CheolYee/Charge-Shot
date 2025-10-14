@@ -11,9 +11,9 @@ namespace _00.Work.WorkSpace.CheolYee._04.Scripts.Managers
 {
     public enum WaveState
     {
-        Idle,       // 쉬는 중
-        Spawning,   // 웨이브 진행 중 (스폰 중/적 살아있음)
-        Finished    // 웨이브 종료
+        Idle,       //쉬는 중
+        Spawning,   //웨이브 진행 중
+        Finished    //웨이브 종료
     }   
     public class SpawnManager : MonoSingleton<SpawnManager>
     {
@@ -21,6 +21,7 @@ namespace _00.Work.WorkSpace.CheolYee._04.Scripts.Managers
         [SerializeField] private List<PortalDataSo> portalData;    // 포탈 설정 데이터
         [SerializeField] private Transform portalSpawnPoint;
         [SerializeField] private int maxSpawnCount;    //최대 스폰 카운트
+        [SerializeField] private int maxWaveCount;    //최대 웨이브
         
         public WaveState CurrentWaveState { get; private set; } = WaveState.Idle;
         
@@ -59,6 +60,8 @@ namespace _00.Work.WorkSpace.CheolYee._04.Scripts.Managers
 
         public void NextWave()
         {
+            if (GameManager.Instance.currentWave == maxWaveCount) return;
+            
             if (CurrentWaveState == WaveState.Finished)
             {
                 Enemys.Clear();
@@ -85,7 +88,7 @@ namespace _00.Work.WorkSpace.CheolYee._04.Scripts.Managers
             if (portal != null)
             {
                 portal.transform.position = portalSpawnPoint.position;
-                portal.Initialize(portalData[GameManager.Instance.currentWave - 1], true);
+                portal.Initialize(portalData[GameManager.Instance.currentWave - 1], false);
                 
                 _portal = portal;
             }

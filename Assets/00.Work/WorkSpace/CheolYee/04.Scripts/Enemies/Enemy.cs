@@ -43,7 +43,7 @@ namespace _00.Work.WorkSpace.CheolYee._04.Scripts.Enemies
         protected EnemyStateMachine StateMachine; //FSM 머신 설정
         protected EnemyAnimController AnimController; //에너미 전용 애니메이션 컨트롤러
         
-        
+        public bool IsSpawning { get; private set; }
         public Transform TargetTransform {get; private set;}
 
         protected override void Awake()
@@ -90,8 +90,17 @@ namespace _00.Work.WorkSpace.CheolYee._04.Scripts.Enemies
             MoveSpeed = enemyData.moveSpeed;
             AttackSpeed = enemyData.attackSpeed;
             
-            HealthComponent.Initialize(this, enemyData.maxHealth);
+            HealthComponent.Initialize(enemyData.maxHealth, this);
             MovementComponent.Initialize(enemyData.moveSpeed, enemyData.jumpForce);
+            
+            StartCoroutine(SpawnDelayRoutine());
+        }
+        
+        private IEnumerator SpawnDelayRoutine()
+        {
+            IsSpawning = true;
+            yield return new WaitForSeconds(0.5f);
+            IsSpawning = false;
         }
 
         private void Start()
@@ -107,6 +116,7 @@ namespace _00.Work.WorkSpace.CheolYee._04.Scripts.Enemies
         
         public void SetDead() //죽은 상태로 만들기
         {
+            MoneyManager.Instance.ChangeMoney(enemyData.money);
             SpawnManager.Instance.IsLastEnemy();
             StateMachine.ChangeState(EnemyBehaviourType.Death);
         }

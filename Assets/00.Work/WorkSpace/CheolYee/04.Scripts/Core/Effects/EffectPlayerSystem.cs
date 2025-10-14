@@ -22,9 +22,11 @@ namespace _00.Work.WorkSpace.CheolYee._04.Scripts.Core.Effects
             ParticleSystem = GetComponent<ParticleSystem>();
         }
 
-        public void SetPosAndPlay(Vector3 pos)
+        public void SetPosAndPlay(Vector3 pos, Color color)
         {
             transform.position = pos;
+            var main = ParticleSystem.main;
+            main.startColor = color;
             ParticleSystem.Play();
         }
         

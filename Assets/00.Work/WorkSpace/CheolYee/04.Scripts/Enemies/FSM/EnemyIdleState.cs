@@ -17,6 +17,8 @@ namespace _00.Work.WorkSpace.CheolYee._04.Scripts.Enemies.FSM
         {
             base.Update();
             
+            if (Enemy.IsSpawning) return;
+            
             Vector3 dir =  Enemy.TargetTransform.position - Enemy.transform.position; //방향 설정
             float distance = dir.magnitude; //거리 가져와서
             //공격 사거리보가 짧고, 쿨타임이 지났으면

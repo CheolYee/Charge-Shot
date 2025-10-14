@@ -44,7 +44,7 @@ namespace _00.Work.Resource.Scripts.Managers
             });
         }
 
-        public void FadeIn(System.Action onFadeComplete = null)
+        public void FadeIn(Action onFadeComplete = null)
         {
             if (fadeImage == null)
             {
@@ -61,23 +61,12 @@ namespace _00.Work.Resource.Scripts.Managers
         
         public void FadeToScene(int sceneIndex)
         {
+            Time.timeScale = 1;
             FadeIn(() =>
             {
                 DOTween.KillAll();
                 SceneManager.LoadScene(sceneIndex);
             });
-        }
-
-
-        public void FadeToSceneDelay(int sceneIndex)
-        {
-            StartCoroutine(DelayAndFadeToScene(sceneIndex));
-        }
-        
-        public IEnumerator DelayAndFadeToScene(int sceneIndex)
-        {
-            yield return null; // 한 프레임 대기: 모든 Awake() 보장
-            FadeManager.Instance.FadeToScene(sceneIndex);
         }
     }
 }

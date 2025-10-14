@@ -20,7 +20,7 @@ namespace _00.Work.WorkSpace.CheolYee._04.Scripts.Projectiles
             RbCompo = GetComponent<Rigidbody2D>();
         }
         
-        public abstract void Initialize(Transform firepos, Vector2 direction, float damage, float knockBackPower, float speed);
+        public abstract void Initialize(Transform firepos, Vector2 direction, float damage, float knockBackPower, float speed, Color color);
         public void ResetItem()
         {
             IsDead = false;
