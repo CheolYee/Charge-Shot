@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d68ebcb7735b40ff8977a2719075f3c7, type: 3}
+  m_Name: Wave 7
+  m_EditorClassIdentifier: 
+  enemies:
+  - {fileID: 11400000, guid: ccd2303b21b87a741b4d57dfda198731, type: 2}
+  - {fileID: 11400000, guid: 0a1ea4b443d083749ae6019b160acdc3, type: 2}
+  enemyData:
+  - {fileID: 11400000, guid: 36391d88e91e72340a642b10d73586e4, type: 2}
+  - {fileID: 11400000, guid: 9260f844db977bc49a1672d9a53a8199, type: 2}
+  enemyCount: 200
+  launchForce: 5
+  minTime: 1.2
+  maxTime: 2.5
+  portalColor: {r: 1, g: 0.83517855, b: 0.1372549, a: 1}

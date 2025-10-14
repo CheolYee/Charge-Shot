@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace _00.Work.WorkSpace.Lusalord._02.Script.Main
@@ -8,6 +9,7 @@ namespace _00.Work.WorkSpace.Lusalord._02.Script.Main
 
         public GameObject switchOn;
         public GameObject switchOff;
+        public event Action<bool> OnSwitch;
 
         private void Start()
         {
@@ -20,10 +22,17 @@ namespace _00.Work.WorkSpace.Lusalord._02.Script.Main
             switchOff.SetActive(!switchMode); // Off 인거 넣어야함
         }
 
+        public void ResetSwitch()
+        {
+            switchMode = false;
+            OnSwitch?.Invoke(switchMode);
+        }
+
+
         public void OnClickSwitch()
         {
             switchMode = !switchMode;
-        
+            OnSwitch?.Invoke(switchMode);
         }
     }
 }

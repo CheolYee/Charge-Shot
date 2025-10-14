@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -10,6 +11,8 @@ namespace _00.Work.WorkSpace.CheolYee._04.Scripts.Core
 
         public Vector2 MoveInput {get; private set;}
         public bool IsSpace {get; private set;}
+        
+        public float ScrollDelta { get; private set; }
 
         private void OnEnable()
         {
@@ -35,6 +38,11 @@ namespace _00.Work.WorkSpace.CheolYee._04.Scripts.Core
         public void OnSpace(InputAction.CallbackContext context)
         {
             IsSpace = context.ReadValueAsButton();
+        }
+
+        public void OnScroll(InputAction.CallbackContext context)
+        {
+            ScrollDelta = context.ReadValue<Vector2>().y;
         }
     }
 }

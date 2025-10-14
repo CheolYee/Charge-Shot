@@ -1,3 +1,4 @@
+using _00.Work.WorkSpace.Lusalord._02.Script;
 using UnityEngine;
 using UnityEngine.Rendering.Universal;
 

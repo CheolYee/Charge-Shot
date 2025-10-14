@@ -31,7 +31,7 @@ namespace _00.Work.WorkSpace.CheolYee._04.Scripts.Creatures.Attack
             _resultArray = new Collider2D[detectCount];
         }
 
-        public bool CastDamage(float damage, float kbPower)
+        public bool CastDamage(float damage, float kbPower = 0, bool isRight = false)
         {
             int cnt;
             bool result = false;
@@ -52,7 +52,7 @@ namespace _00.Work.WorkSpace.CheolYee._04.Scripts.Creatures.Attack
                             RaycastHit2D hit = Physics2D.Raycast(transform.position, direction.normalized, 
                                 direction.magnitude, whatIsTarget.layerMask);
                     
-                            agent.HealthComponent.TakeDamage(damage, hit.normal, kbPower);
+                            agent.HealthComponent.TakeDamage(damage, hit.normal, kbPower, isRight);
                             result = true;
                         }
                     }
@@ -72,7 +72,7 @@ namespace _00.Work.WorkSpace.CheolYee._04.Scripts.Creatures.Attack
                             RaycastHit2D hit = Physics2D.Raycast(transform.position, direction.normalized, 
                                 direction.magnitude, whatIsTarget.layerMask);
 
-                            agent.HealthComponent.TakeDamage(damage, hit.normal, kbPower);
+                            agent.HealthComponent.TakeDamage(damage, hit.normal, kbPower, isRight);
                             result = true;
                         }
                     }

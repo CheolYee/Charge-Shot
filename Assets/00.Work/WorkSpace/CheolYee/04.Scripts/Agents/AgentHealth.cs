@@ -1,4 +1,3 @@
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -12,52 +11,20 @@ namespace _00.Work.WorkSpace.CheolYee._04.Scripts.Agents
         private float _maxHealth = 150f;
         private float _currentHealth;
 
-        private Dictionary<string, float> _healthMultipliers = new();
-
         public float CurrentHealth => _currentHealth;
 
-        public float MaxHealth => _maxHealth * TotalMultiplier;
+        public float MaxHealth => _maxHealth;
 
         public float NormalizedHealth => _currentHealth / MaxHealth;
 
 
-        private Agents.Agent _owner;
+        private Agent _owner;
 
-        public void Initialize(Agents.Agent owner, float health)
+        public void Initialize(float health, Agent owner = null)
         {
             _maxHealth = health;
             _owner = owner;
             ResetHealth();
-        }
-        private float TotalMultiplier
-        {
-            get
-            {
-                float result = 1f;
-                foreach (var kv in _healthMultipliers)
-                    result += kv.Value;
-                return result;
-            }
-        }
-
-        public void AddMultiplier(string source, float multiplier)
-        {
-            _healthMultipliers[source] = multiplier;
-            RecalculateHealth();
-        }
-
-        public void RemoveMultiplier(string source)
-        {
-            if (_healthMultipliers.ContainsKey(source))
-                _healthMultipliers.Remove(source);
-            RecalculateHealth();
-        }
-
-        private void RecalculateHealth()
-        {
-            float ratio = _currentHealth / MaxHealth; // 현재 비율 유지
-            _currentHealth = MaxHealth * ratio;
-            _currentHealth = Mathf.Clamp(_currentHealth, 0, MaxHealth);
         }
 
 
@@ -70,13 +37,8 @@ namespace _00.Work.WorkSpace.CheolYee._04.Scripts.Agents
         {
             _currentHealth = Mathf.Clamp(_currentHealth + healAmount, 0, MaxHealth);
         }
-        public void HealPer(float percent)
-        {
-            float healAmount = MaxHealth * percent;
-            Heal(healAmount);
-        }
 
-        public void TakeDamage(float amount, Vector2 normal, float kbPower, Agents.Agent attacker = null)
+        public void TakeDamage(float amount, Vector2 normal, float kbPower, bool isRight = false)
         {
             Debug.Assert(_owner != null, $"{nameof(_owner)} 의 체력이 초기화되지 않았습니다.");
 
@@ -87,7 +49,7 @@ namespace _00.Work.WorkSpace.CheolYee._04.Scripts.Agents
             if (kbPower > 0)
             {
                 //노말은 피격지점의 수직인 벡터니까 -1을 곱하면 피격 방향 벡텀가 나오게 된다
-                _owner.MovementComponent.GetKnockBack(normal * -1, kbPower);
+                _owner.MovementComponent.GetKnockBack(normal * -1, kbPower, isRight);
             }
 
             if (CurrentHealth <= 0)

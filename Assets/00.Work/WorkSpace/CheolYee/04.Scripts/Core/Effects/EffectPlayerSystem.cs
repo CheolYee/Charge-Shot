@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using _00.Work.Resource.Scripts.Managers;
 using _00.Work.Scripts.Managers;
 using _00.Work.Scripts.SO;
 using UnityEngine;
@@ -21,9 +22,11 @@ namespace _00.Work.WorkSpace.CheolYee._04.Scripts.Core.Effects
             ParticleSystem = GetComponent<ParticleSystem>();
         }
 
-        public void SetPosAndPlay(Vector3 pos)
+        public void SetPosAndPlay(Vector3 pos, Color color)
         {
             transform.position = pos;
+            var main = ParticleSystem.main;
+            main.startColor = color;
             ParticleSystem.Play();
         }
         
@@ -31,7 +34,7 @@ namespace _00.Work.WorkSpace.CheolYee._04.Scripts.Core.Effects
         {
             transform.position = pos;
             ParticleSystem.Play();
-            StartCoroutine(DelayAndGoToPool());
+            StartCoroutine(DelayAndGoToPool(duration));
         }
         
         private IEnumerator DelayAndGoToPool(float duration = 1)

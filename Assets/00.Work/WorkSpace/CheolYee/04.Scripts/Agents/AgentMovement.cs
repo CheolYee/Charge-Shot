@@ -1,14 +1,13 @@
 using System.Collections;
 using _00.Work.WorkSpace.CheolYee._04.Scripts.Core;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace _00.Work.WorkSpace.CheolYee._04.Scripts.Agents
 {
-    public class AgentMovement : MonoBehaviour
+    public abstract class AgentMovement : MonoBehaviour
     {
-
-        [Header("Motor Options")]
-
+ 
         [Header("References")]
         [field: SerializeField] public Rigidbody2D RbCompo { get; private set; } //다른곳에서 리지드바디를 가져오기 위함
 
@@ -23,9 +22,11 @@ namespace _00.Work.WorkSpace.CheolYee._04.Scripts.Agents
         public readonly NotifyValue<bool> IsGround = new NotifyValue<bool>();
 
         private float _xMove; //x축 이동 저장
-        public bool canMove = true; //움직일 수 있는가?
+        [field: SerializeField] public bool CanMove { get; set; } = true; //움직일 수 있는가?
+        private bool _canBeKnocked = true; //넉백 가능한지 (쿨타임)
         private Coroutine _kbCoroutine; //넉백 코루틴 저장 (최적화)
-        [SerializeField] private bool canBeKnocked = true; //넉백 가능한지 (쿨타임)
+
+        public abstract void Initialize(float moveSpeed, float jumpForce);
 
         public void SetMovement(float xMove) => _xMove = xMove;
 
@@ -52,7 +53,7 @@ namespace _00.Work.WorkSpace.CheolYee._04.Scripts.Agents
         {
             CheckGround();
 
-            if (canMove == false) return;
+            if (CanMove == false) return;
             MoveAgent();
         }
 
@@ -75,18 +76,27 @@ namespace _00.Work.WorkSpace.CheolYee._04.Scripts.Agents
 
         public void JumpTo(Vector2 force)
         {
+            StopImmediately();
             SetMovement(force.x); //force X는 방향으로 설정하고
             RbCompo.AddForce(force, ForceMode2D.Impulse); //Impulse는 즉시 속도에 적용하는 힘.
         }
 
         #region Knockback section
 
-        public void GetKnockBack(Vector3 direction, float power)
+        public void GetKnockBack(Vector3 direction, float power, bool isRight = false)
         {
-            if (!canBeKnocked) return;
+            if (!_canBeKnocked) return;
+
+            if (isRight)
+            {
+                direction = Vector3.right;
+            }
+            else
+            {
+                if (direction.y > 0.5f) direction.y = 0.1f;
+                if (direction.y < -0.5f) direction.y = -0.1f;
+            }
             
-            if (direction.y > 0.5f) direction.y = 0.1f;
-            if (direction.y < -0.5f) direction.y = -0.1f;
             
             Vector3 difference = direction * (power * RbCompo.mass);
             RbCompo.AddForce(difference, ForceMode2D.Impulse);
@@ -100,12 +110,12 @@ namespace _00.Work.WorkSpace.CheolYee._04.Scripts.Agents
 
         private IEnumerator KnockBackCoroutine()
         {
-            canBeKnocked = false;
-            canMove = false;
+            _canBeKnocked = false;
+            CanMove = false;
             yield return new WaitForSeconds(KnockBackDuration);
             RbCompo.linearVelocity = Vector2.zero;
-            canMove = true;
-            canBeKnocked = true;
+            CanMove = true;
+            _canBeKnocked = true;
         }
 
         #endregion

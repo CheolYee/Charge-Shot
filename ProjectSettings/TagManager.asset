@@ -14,8 +14,8 @@ TagManager:
   - Ground
   - Enemy
   - Projectile
-  - 
-  - 
+  - Turret
+  - DeadBody
   - 
   - 
   - 
@@ -46,6 +46,12 @@ TagManager:
     locked: 0
   - name: Top
     uniqueID: 396294213
+    locked: 0
+  - name: Enemy
+    uniqueID: 4278888813
+    locked: 0
+  - name: UI
+    uniqueID: 1672706917
     locked: 0
   m_RenderingLayers:
   - Default

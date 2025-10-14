@@ -1,62 +1,84 @@
 using System;
-using UnityEngine;
-using UnityEngine.InputSystem;
+using _00.Work.Scripts.Managers;
 using DG.Tweening;
+using UnityEngine;
 
-public class SettingMachineState : MonoBehaviour
+namespace _00.Work.WorkSpace.Lusalord._02.Script.Main
 {
-    [SerializeField] private RectTransform machineUI;
-    private bool _canState; // UI를 킬 수 있는지 상태
-    private bool _isPlaying;
-
-    private void Start()
+    public class SettingMachineState : MonoSingleton<SettingMachineState>
     {
-        machineUI.localScale = new Vector2(0, 0);
-    }
+        [SerializeField] private RectTransform machineUI;
 
-    private void Update()
-    {
-        SetMachineUI();
-    }
+        private SwitchMode SwitchMode { get; set; }
+        private UIFlip UIFlip { get; set; }
+        
+        public event Action<bool> OkCapacitor;
 
-    private void SetMachineUI()
-    {
-        if (Keyboard.current.tabKey.wasPressedThisFrame && !_isPlaying)
+        private bool _isSwitch;
+        private bool _isJunja;
+        protected override void Awake()
         {
-            _canState = !_canState;
+            base.Awake();
+            SwitchMode = GetComponentInChildren<SwitchMode>();
+            UIFlip = GetComponentInChildren<UIFlip>();
 
-            if (_canState)
+            SwitchMode.OnSwitch += onSwitch =>
             {
-                OpenMachineUI();
+                _isSwitch = onSwitch;
+                IsBothSuccess();
+            };
+            UIFlip.OkJunja += onJunja =>
+            {
+                _isJunja = onJunja;
+                IsBothSuccess();  
+            };
+        }
+
+        private void IsBothSuccess()
+        {
+            Debug.Log($"IsBothSuccess: {_isSwitch}, {_isJunja}");
+            if (_isSwitch && _isJunja)
+            {
+                OkCapacitor?.Invoke(true);
             }
             else
             {
-                CloseMachineUI();
+                OkCapacitor?.Invoke(false);
             }
         }
-    }
-    private void OpenMachineUI()
-    {
-        _isPlaying = true;
-        machineUI.localScale = new Vector2(0, 0.01f);
-        machineUI.DOScaleX(1, 0.5f).OnComplete(OnOpenX);
-    }
+        
+        
+        public void ResetSwitchMode()
+        {
+            SwitchMode.ResetSwitch();
+            UIFlip.RandomRotation();
+            IsBothSuccess();
+        }
 
-    private void OnOpenX()
-    {
-        _isPlaying = false;
-        machineUI.DOScaleY(1, 0.5f);
-    }
+        private void Start()
+        {
+            machineUI.localScale = new Vector3(0, 0, 1);
+        }
+    
+        public void OpenMachineUI()
+        {
+            machineUI.localScale = new Vector3(0, 0.01f, 1);
+            machineUI.DOScaleX(0.7f, 0.5f).OnComplete(OnOpenX);
+        }
 
-    private void CloseMachineUI()
-    {
-        _isPlaying = true;
-        machineUI.DOScaleY(0.01f, 0.5f).OnComplete(OnCloseY);
-    }
+        private void OnOpenX()
+        {
+            machineUI.DOScaleY(0.7f, 0.5f);
+        }
 
-    private void OnCloseY()
-    {
-        _isPlaying = false;
-        machineUI.DOScaleX(0, 0.5f);
+        public void CloseMachineUI()
+        {
+            machineUI.DOScaleY(0.01f, 0.5f).OnComplete(OnCloseY);
+        }
+
+        private void OnCloseY()
+        {
+            machineUI.DOScaleX(0, 0.5f);
+        }
     }
 }

@@ -10,9 +10,14 @@ namespace _00.Work.WorkSpace.CheolYee._04.Scripts.Enemies.SO
         
         [Header("Movement Settings")]
         public float moveSpeed;
+        public float jumpForce;
         public float knockbackDuration;
 
         [Header("Combat Settings")] 
         public float attackDamage;
+        public float attackSpeed;
+        
+        [Header("Money Count")]
+        public int money;
     }
 }
