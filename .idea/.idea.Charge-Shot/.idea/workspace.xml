@@ -5,64 +5,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="55fc02ba-fb02-47fe-b695-f25627f2807f" name="변경" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/00.Work/WorkSpace/CheolYee/04.Scripts/Managers/MoneyManager.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/00.Work/WorkSpace/CheolYee/04.Scripts/Managers/MoneyManager.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/00.Work/WorkSpace/CheolYee/04.Scripts/Turret/CapacitorData.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/00.Work/WorkSpace/CheolYee/04.Scripts/Turret/CapacitorData.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/00.Work/WorkSpace/CheolYee/04.Scripts/Turret/TurretHpBar.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/00.Work/WorkSpace/CheolYee/04.Scripts/Turret/TurretHpBar.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/00.Work/WorkSpace/CheolYee/04.Scripts/UI/BuyButton.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/00.Work/WorkSpace/CheolYee/04.Scripts/UI/BuyButton.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/00.Work/WorkSpace/CheolYee/04.Scripts/UI/CapacitorTextUI.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/00.Work/WorkSpace/CheolYee/04.Scripts/UI/CapacitorTextUI.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/00.Work/WorkSpace/CheolYee/04.Scripts/UI/GameClearUI.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/00.Work/WorkSpace/CheolYee/04.Scripts/UI/GameClearUI.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/00.Work/WorkSpace/CheolYee/04.Scripts/UI/ShopUI.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/00.Work/WorkSpace/CheolYee/04.Scripts/UI/ShopUI.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Charge-Shot/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Charge-Shot/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/00.Work/Resource/Scripts/Managers/FadeManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/00.Work/Resource/Scripts/Managers/FadeManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/00.Work/Resource/Scripts/UI/FadeImgFinder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/00.Work/Resource/Scripts/UI/FadeImgFinder.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/00.Work/Resource/Scripts/UI/FadeImgFinder1.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/00.Work/Resource/Scripts/UI/FadeImgFinder1.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/00.Work/Resource/Scripts/UI/FadeManager.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/00.Work/Resource/Scripts/UI/FadeManager.cs.meta" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/00.Work/WorkSpace/CheolYee/04.Scripts/UI/StartUI.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/00.Work/WorkSpace/CheolYee/04.Scripts/UI/StartUI.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/00.Work/Resource/Fonts/neodgm SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/00.Work/Resource/Fonts/neodgm SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/00.Work/Resource/Prefabs/Managers/SoundManager.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/00.Work/Resource/Prefabs/Managers/SoundManager.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/00.Work/Resource/Scripts/UI/MenuUIBtn.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/00.Work/Resource/Scripts/UI/MenuUIBtn.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/00.Work/WorkSpace/CheolYee/00.Scenes/Main.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/00.Work/WorkSpace/CheolYee/00.Scenes/Main.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/00.Work/WorkSpace/CheolYee/01.Sprites/TileMap/New Tile Palette.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/00.Work/WorkSpace/CheolYee/01.Sprites/TileMap/New Tile Palette.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/00.Work/WorkSpace/CheolYee/04.Scripts/Agents/AgentHealth.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/00.Work/WorkSpace/CheolYee/04.Scripts/Agents/AgentHealth.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/00.Work/WorkSpace/CheolYee/04.Scripts/Agents/AgentMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/00.Work/WorkSpace/CheolYee/04.Scripts/Agents/AgentMovement.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/00.Work/WorkSpace/CheolYee/04.Scripts/Core/Effects/EffectPlayerSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/00.Work/WorkSpace/CheolYee/04.Scripts/Core/Effects/EffectPlayerSystem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/00.Work/WorkSpace/CheolYee/04.Scripts/Core/PlayerInputSo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/00.Work/WorkSpace/CheolYee/04.Scripts/Core/PlayerInputSo.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/00.Work/WorkSpace/CheolYee/04.Scripts/Enemies/Enemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/00.Work/WorkSpace/CheolYee/04.Scripts/Enemies/Enemy.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/00.Work/WorkSpace/CheolYee/04.Scripts/Enemies/FSM/EnemyIdleState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/00.Work/WorkSpace/CheolYee/04.Scripts/Enemies/FSM/EnemyIdleState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/00.Work/WorkSpace/CheolYee/04.Scripts/Enemies/SO/EnemyDataSo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/00.Work/WorkSpace/CheolYee/04.Scripts/Enemies/SO/EnemyDataSo.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/00.Work/WorkSpace/CheolYee/04.Scripts/Managers/CameraManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/00.Work/WorkSpace/CheolYee/04.Scripts/Managers/CameraManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/00.Work/WorkSpace/CheolYee/04.Scripts/Managers/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/00.Work/WorkSpace/CheolYee/04.Scripts/Managers/GameManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/00.Work/WorkSpace/CheolYee/04.Scripts/Managers/SpawnManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/00.Work/WorkSpace/CheolYee/04.Scripts/Managers/SpawnManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/00.Work/WorkSpace/CheolYee/04.Scripts/Portals/Portal.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/00.Work/WorkSpace/CheolYee/04.Scripts/Portals/Portal.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/00.Work/WorkSpace/CheolYee/04.Scripts/Projectiles/Laser/Laser.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/00.Work/WorkSpace/CheolYee/04.Scripts/Projectiles/Laser/Laser.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/00.Work/WorkSpace/CheolYee/04.Scripts/Projectiles/Projectile.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/00.Work/WorkSpace/CheolYee/04.Scripts/Projectiles/Projectile.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/00.Work/WorkSpace/CheolYee/04.Scripts/Turret/LaserTurret.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/00.Work/WorkSpace/CheolYee/04.Scripts/Turret/LaserTurret.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/00.Work/WorkSpace/CheolYee/04.Scripts/UI/WaveUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/00.Work/WorkSpace/CheolYee/04.Scripts/UI/WaveUI.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/00.Work/WorkSpace/CheolYee/05.Prefabs/Enemys/Golem1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/00.Work/WorkSpace/CheolYee/05.Prefabs/Enemys/Golem1.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/00.Work/WorkSpace/CheolYee/05.Prefabs/Laser.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/00.Work/WorkSpace/CheolYee/05.Prefabs/Laser.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/00.Work/WorkSpace/CheolYee/05.Prefabs/portal.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/00.Work/WorkSpace/CheolYee/05.Prefabs/portal.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/00.Work/WorkSpace/CheolYee/06.SO/EnemyData/GolemEnemy1.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/00.Work/WorkSpace/CheolYee/06.SO/EnemyData/GolemEnemy1.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/00.Work/WorkSpace/CheolYee/06.SO/PortalData/Wave1.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/00.Work/WorkSpace/CheolYee/06.SO/PortalData/Wave1.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/00.Work/WorkSpace/CheolYee/06.SO/PortalData/Wave2.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/00.Work/WorkSpace/CheolYee/06.SO/PortalData/Wave2.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/00.Work/WorkSpace/Lusalord/01. Scenes/Main.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/00.Work/WorkSpace/Lusalord/01. Scenes/Main.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/00.Work/WorkSpace/Lusalord/02.Script/CyberpunkDeathFeature.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/00.Work/WorkSpace/Lusalord/02.Script/CyberpunkDeathFeature.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/00.Work/WorkSpace/Lusalord/02.Script/GlitchEffect.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/00.Work/WorkSpace/Lusalord/02.Script/GlitchEffect.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/00.Work/WorkSpace/CheolYee/04.Scripts/UI/BuyButton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/00.Work/WorkSpace/CheolYee/04.Scripts/UI/BuyButton.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/00.Work/WorkSpace/CheolYee/07.Sounds/Main.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/00.Work/WorkSpace/CheolYee/07.Sounds/Main.ogg.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/00.Work/WorkSpace/Lusalord/01. Scenes/Start.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/00.Work/WorkSpace/Lusalord/01. Scenes/Start.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/00.Work/WorkSpace/Lusalord/02.Script/Main/SettingMachineState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/00.Work/WorkSpace/Lusalord/02.Script/Main/SettingMachineState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Controls.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Controls.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Controls.inputactions" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Controls.inputactions" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PP.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PP.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/Renderer2D.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/Renderer2D.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/00.Work/WorkSpace/Lusalord/03.Asset/0555ce4564895a6f.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/00.Work/WorkSpace/Lusalord/03.Asset/0555ce4564895a6f.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/00.Work/WorkSpace/Lusalord/03.Asset/2025-10-13_233408.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/00.Work/WorkSpace/Lusalord/03.Asset/2025-10-13_233408.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/UniversalRP.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/UniversalRP.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UniversalRenderPipelineGlobalSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UniversalRenderPipelineGlobalSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -108,10 +68,6 @@
       <option name="WORKING_DIRECTORY" value="C:\unityproject\Charge-Shot" />
       <option name="PASS_PARENT_ENVS" value="1" />
       <option name="USE_EXTERNAL_CONSOLE" value="0" />
-      <option name="ENV_FILE_PATHS" value="" />
-      <option name="REDIRECT_INPUT_PATH" value="" />
-      <option name="PTY_MODE" value="Auto" />
-      <option name="MIXED_MODE_DEBUG" value="0" />
       <method v="2" />
     </configuration>
     <configuration name="Unity 시작" type="RunUnityExe" factoryName="Unity Executable">
@@ -120,10 +76,6 @@
       <option name="WORKING_DIRECTORY" value="C:\unityproject\Charge-Shot" />
       <option name="PASS_PARENT_ENVS" value="1" />
       <option name="USE_EXTERNAL_CONSOLE" value="0" />
-      <option name="ENV_FILE_PATHS" value="" />
-      <option name="REDIRECT_INPUT_PATH" value="" />
-      <option name="PTY_MODE" value="Auto" />
-      <option name="MIXED_MODE_DEBUG" value="0" />
       <method v="2" />
     </configuration>
     <configuration name="Unity 에디터에 연결" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
@@ -137,7 +89,6 @@
       <option name="selectedOptions">
         <list />
       </option>
-      <option name="useMixedMode" value="false" />
       <method v="2" />
     </configuration>
     <configuration name="Unreal 에디터에 연결 후 재생" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
@@ -151,7 +102,6 @@
       <option name="selectedOptions">
         <list />
       </option>
-      <option name="useMixedMode" value="false" />
       <method v="2" />
     </configuration>
     <configuration name="기기에 연결" type="UnityDevicePlayer" factoryName="UnityAttachToDevicePlayer">
@@ -184,7 +134,7 @@
       <workItem from="1760180964630" duration="2299000" />
       <workItem from="1760275510199" duration="4337000" />
       <workItem from="1760337444432" duration="19886000" />
-      <workItem from="1760398009780" duration="6079000" />
+      <workItem from="1760398009780" duration="21278000" />
     </task>
     <servers />
   </component>

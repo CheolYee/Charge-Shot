@@ -15,7 +15,7 @@ namespace _00.Work.WorkSpace.CheolYee._04.Scripts.Managers
 
         private void Start()
         {
-            SoundManager.Instance.PlayBgm("Main");
+            SoundManager.Instance.PlayBgm("MAIN");
         }
 
         public void Finish()
