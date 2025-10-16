@@ -44,5 +44,10 @@ namespace _00.Work.Scripts.UI
         {
             FadeManager.Instance.FadeToScene(0);
         }
+
+        public void QuitButton()
+        {
+            Application.Quit();
+        }
     }
 }

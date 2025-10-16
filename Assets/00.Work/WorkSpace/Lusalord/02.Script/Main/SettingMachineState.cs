@@ -36,7 +36,6 @@ namespace _00.Work.WorkSpace.Lusalord._02.Script.Main
 
         private void IsBothSuccess()
         {
-            Debug.Log($"IsBothSuccess: {_isSwitch}, {_isJunja}");
             if (_isSwitch && _isJunja)
             {
                 OkCapacitor?.Invoke(true);

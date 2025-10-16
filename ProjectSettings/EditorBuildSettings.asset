@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/00.Work/WorkSpace/Lusalord/01. Scenes/Start.unity
+    guid: a69020e1c2c43cc488156e97209a3af5
+  - enabled: 1
     path: Assets/00.Work/WorkSpace/CheolYee/00.Scenes/Main.unity
     guid: 39589554315178f47a161f5c62bda54b
   m_configObjects:

@@ -34,7 +34,7 @@ namespace _00.Work.WorkSpace.CheolYee._04.Scripts.UI
 
         private bool BuyEvent()
         {
-            if (MoneyManager.Instance.Money > capacitorData.price)
+            if (MoneyManager.Instance.Money >= capacitorData.price)
             {
                 Debug.Log("구매 완료");
                 MoneyManager.Instance.ChangeMoney(-capacitorData.price);
